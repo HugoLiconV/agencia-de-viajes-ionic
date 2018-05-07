@@ -1,9 +1,12 @@
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+<ion-content class="grid-basic-page">
+  <ion-grid>
+    <ion-row *ngFor="let place of places">
+      <ion-col col-12>
+        <h1>{{place.name}}</h1>
+      </ion-col>
+      <ion-col col-6 *ngFor="let slide of place.slides">
+        <img [src]="slide.image">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

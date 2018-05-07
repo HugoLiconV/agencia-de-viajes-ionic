@@ -2,6 +2,8 @@ export class Place {
   name: String;
   description: String;
   cost: String;
+  latitude: Number;
+  longitude: Number;
   slides: Slide[];
 }
 

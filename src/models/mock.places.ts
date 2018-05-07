@@ -1,12 +1,47 @@
 import { Place } from './place'
-import { Slide } from './place'
 
 export const PLACES: Place[] =
 [
   {
+  name: "Aldama",
+    description: "When you visit Aldama, prepare to cross a few must-see attractions – Templo de San Carlos Borromeo, Templo de San Jerónimo, Casa de la cultura and Hugo, to name a few – off your bucket list.",
+    cost: "100",
+    latitude: 28.838611,
+    longitude: -105.911111,
+    slides: [
+      {
+        title: "Templo de San Carlos Borromeo",
+        description: "El Templo de San Carlos Borromeo es el templo católico más antiguo de la población y que tiene su origen como templo el antiguo Presidio colonial español ahí establecido.",
+        image: "assets/imgs/aldama/img1.jpg",
+      },
+      {
+        title: "Plaza",
+        description: "<b>La plaza</b> municipal de Aldama es a donde vas a comerte tu elote con tu agua de horchata",
+        image: "assets/imgs/aldama/img2.jpg",
+      },
+      {
+        title: "Templo de San Jerónimo",
+        description: "El Templo de San Jerónimo es un templo de culto católico es sede de la parroquia que atiende a la población y su principal monumento religioso;",
+        image: "assets/imgs/aldama/img3.jpg",
+      },
+      {
+        title: "Zoológico de Aldama",
+        description: "El Zoológico de Aldama cuenta actualmente con mil ejemplares de 85 especies distintas de fauna de diversos lugares del mundo.",
+        image: "assets/imgs/aldama/img4.jpg",
+      },
+      {
+        title: "Casa de la cultura",
+        description: "Esta casa fue construída en 1904, funcionando inicialmente como escuela primaria, diseñada con arquitectura neoclásica y convertida finalmente en la década de 1980, en la Casa de la Cultura Arturo Norte García. Es el edificio que promueve todas las actividades que conciernen a lo cultural",
+        image: "assets/imgs/aldama/img5.jpg",
+      }
+    ]
+  },
+  {
     name: "Roma",
     description: "Why go: When you visit the Eternal City, prepare to cross a few must-see attractions – the Colosseum, the Trevi Fountain and the Pantheon, to name a few – off your bucket list. Additional treasures like St. Peter's Basilica and the Sistine Chapel can be found in nearby Vatican City",
     cost: "30000",
+    latitude: 41.89193,
+    longitude: 12.51133,
     slides: [
       {
         title: "Eternal City",
@@ -34,6 +69,8 @@ export const PLACES: Place[] =
     name: "Sydney",
     description: "Sydney is both a laid-back beachside town and a thriving metropolis that boasts some of the Southern Hemisphere's best surf, landmarks and activities. Whether you're looking to watch a show at the iconic Opera House, take to the waves at Bondi Beach or explore trendy areas like The Rocks and Darling Harbour, Sydney features something for everyone. Even Sydneysiders have an ideal mix of both worlds: Fashion-forward attire and British-style sarcasm combine with a no worries attitude and relaxed coastal vibe. It's no wonder this vibrant city down under is a natural choice for first-time Aussie visitors.",
     cost: "60000",
+    latitude: -33.865143,
+    longitude: 151.209900,
     slides: [
       {
         title: "Sydney's skyline view",
@@ -61,6 +98,8 @@ export const PLACES: Place[] =
     name: "Porto",
     description: "Porto has long been a hot destination for wine lovers — it's the go-to place to find the best of that sweet, tasty port wine. But this city by the sea has more to offer than vinho. Porto (or Oporto, as it's sometimes called) is an attractive European mini-metropolis on Portugal's northwestern coast where travelers can get their fill of culture and the outdoors. Travelers can visit the city's wealth of museums, admire its varied architecture and, of course, hit the beach.",
     cost: "40000",
+    latitude: 41.14961,
+    longitude: -8.61099,
     slides: [
       {
         title: " Porto lies Foz do Douro",
@@ -88,6 +127,8 @@ export const PLACES: Place[] =
     name: "London",
     description: "The English writer Samuel Johnson famously said, You find no man, at all intellectual, who is willing to leave London. No, Sir, when a man is tired of London, he is tired of life; for there is in London all that life can afford. More than two centuries have passed since Johnson's era, but his words still ring true. Life in London is nothing short of invigorating, and travelers find that one visit isn't enough to experience everything this two-millennia-old city has to offer.",
     cost: "60000",
+    latitude: 51.509865,
+    longitude: -0.118092,
     slides: [
       {
         title: "London Eye",
@@ -115,6 +156,8 @@ export const PLACES: Place[] =
     name: "Paris",
     description: "The City of Light draws millions of visitors every year with its unforgettable ambiance. Of course, the divine cuisine and vast art collections deserve some of the credit as well. The gentle River Seine rambles through the city, flanked by stately museums, centuries-old churches, and blocks of Rococo- and Neoclassic-design architecture, further enhanced by cascading trees and glowing streetlamps. Peppering the Seine's cobbled walks and graceful bridges are impossibly chic Parisians, probably on their way to the market, cafe or cinema.",
     cost: "35000",
+    latitude: 48.864716,
+    longitude: 2.349014,
     slides: [
       {
         title: "Bateaux-Mouches",
@@ -142,6 +185,8 @@ export const PLACES: Place[] =
     name: "New York City",
     description: "Cool, cosmopolitan, crowded, constantly evolving … the Big Apple blends big city splendor with small-town charm. Amid Gotham's iconic landmarks and towering skyscrapers, you'll experience a vibrant culture permeating each of the city's distinctive neighborhoods and boroughs. Follow trendsetters to the East Village and Brooklyn to check out indie boutiques, iconic bakeries and trendy coffee shops. Afterward, peruse the racks of the sleek shops lining Fifth Avenue, admire the cutting-edge art collections at the MoMa and the Met, catch a memorable show on Broadway or sit down for a meal at the latest it restaurant.",
     cost: "40000",
+    latitude: 40.730610,
+    longitude: -73.935242,
     slides: [
       {
         title: "Brooklyn Bridge",
@@ -169,6 +214,8 @@ export const PLACES: Place[] =
     name: "Florence",
     description: "This little city, tucked amid the Tuscan hills, casts a long shadow through history. The wellspring of the Renaissance, Firenze (or Florence) sheltered the powerful Medici family and inspired artists like Michelangelo (David) and Brunelleschi (the Duomo). If it weren't for the fashionable Italians and chic shops lining Via Tornabuoni, you might think you had traveled back in time to the 14th century. But Renaissance art is not the only reason to come: You also visit Florence for its gorgeous sunsets, its Italian cooking and its unbeatable romantic charm.",
     cost: "65000",
+    latitude: 43.769562,
+    longitude: 11.255814,
     slides: [
       {
         title: "The Duomo",
@@ -196,6 +243,8 @@ export const PLACES: Place[] =
     name: "Prague",
     description: "A prosperous and bustling city, Prague now attracts more tourists than ever. But its picturesque downtown veils both a dark legacy and a resilient past. Dating back to about A.D. 870, Prague has withstood numerous overthrows, invasions, fires and floods. It's this reputation for survival and perseverance that has made the Czech capital so fascinating. Today, its storied churches, narrow streets, daunting hilltop castle and statue-lined bridges create the scene of an urban fairy tale. Even the most jaded traveler would have trouble resisting this city's charms.",
     cost: "50000",
+    latitude: 50.08804,
+    longitude: 14.42076,
     slides: [
       {
         title: "Prague",
@@ -223,6 +272,8 @@ export const PLACES: Place[] =
     name: "Barcelona",
     description: "Barcelona contains both the authentically historic and the wildly bizarre. From the scenic trails of the colorful Park Güell to the romantic narrow alleys of Barri Gòtic; from the beachside nightclubs to the city's dozens of sacred churches and architectural marvels, this city by the sea seems to attract all types: the adventurer, the couple, the partier, the culture lover – and more – with an almost overwhelming variety of things to do. You could stay for a few days, but chances are you'll need a whole week to explore.",
     cost: "45000",
+    latitude: 41.390205,
+    longitude: 2.154007,
     slides: [
       {
         title: "Parc Güell",
@@ -250,6 +301,8 @@ export const PLACES: Place[] =
     name: "Dubai",
     description: "Dubai and Las Vegas have a lot in common. Both cities share a love for the fantastical, with skylines that shine like beacons against barren desert backdrops. People from all over the world flock to these shimmering oases with the same goal: to play hard. But as a vacation spot, Dubai easily trumps ol' Sin City thanks to its gorgeous cream-colored Persian Gulf shoreline, international culinary scene and larger-than-life attractions. And the city's still growing; plans are underway for something bigger and better. It's estimated that a quarter of the world's construction cranes can be found here. If that's any sign, even the sky may not be able to limit Dubai's growth.",
     cost: "90000",
+    latitude: 25.276987,
+    longitude: 55.296249,
     slides: [
       {
         title: "Dubai",
