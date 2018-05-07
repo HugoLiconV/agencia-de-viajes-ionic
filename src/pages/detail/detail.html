@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar [color]="isAndroid ? 'royal' : 'primary'">
     <ion-title>
       {{ place.name }}
     </ion-title>

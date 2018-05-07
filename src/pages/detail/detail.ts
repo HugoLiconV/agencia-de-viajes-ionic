@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Place } from '../../models/place'
+import { Platform } from 'ionic-angular';
 
 declare var google;
 @Component({
@@ -11,11 +12,14 @@ export class DetailPage {
 
   place: Place;
   map: any;
+  isAndroid: boolean = false;
 
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams) {
+    public navParams: NavParams,
+    platform: Platform) {
     this.place = navParams.data.place;
+    this.isAndroid = platform.is('android');
   }
 
   ionViewDidLoad() {
