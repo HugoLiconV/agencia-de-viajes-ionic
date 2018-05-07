@@ -1,17 +1,56 @@
-<!-- <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header> -->
+<ion-content>
+  <ion-card *ngFor="let place of places">
+    <div class="tutorial-page">
+        <ion-slides pager>
+          <ion-slide *ngFor="let slide of place.slides">
+            <div class="container">
+              <img [src]="slide.image" class="slide-image"/>
+            </div>
+            <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+            <p [innerHTML]="slide.description"></p>
+            <div class="slider-dot"></div>
+          </ion-slide>
+        </ion-slides>
+    </div>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+    <ion-card-content>
+      <ion-card-title>
+        {{place.name}}
+      </ion-card-title>
+      <p>
+        {{place.description}}
+      </p>
+    </ion-card-content>
+
+    <ion-item>
+      <!-- <ion-icon name="cash" item-start large></ion-icon>
+      <h2>Price</h2>
+      <p>{{place.cost}}</p> -->
+      <span ion-text item-start color="secondary" class="item-bold">Cost:</span>
+      <span ion-text item-start color="subtle">{{place.cost | currency}}</span>
+    </ion-item>
+    
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='star'></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='cash'></ion-icon>
+          Reserve
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
 </ion-content>
+
