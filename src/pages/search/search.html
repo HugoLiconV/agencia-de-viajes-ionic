@@ -1,0 +1,13 @@
+<ion-content>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let place of places">
+      <ion-thumbnail item-start>
+        <img [src]="place.slides[0].image">
+      </ion-thumbnail>
+      <h2>{{ place.name }}</h2>
+      <p>{{ place.description }}</p>
+      <button ion-button clear item-end (click)="openNavDetailsPage(place)">View</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

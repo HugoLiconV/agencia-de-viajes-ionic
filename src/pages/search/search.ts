@@ -2,25 +2,26 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { PLACES } from '../../models/mock.places'
 import { Place } from '../../models/place'
+import { DetailPage } from '../detail/detail'
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-search',
+  templateUrl: 'search.html'
 })
-export class AboutPage {
+export class SearchPage {
   // items: String[] = [];
-  items: Places[];
+  places: Place[];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public nav: NavController) {
     this.initializeItems();
   }
 
   initializeItems() {
-    // this.items = [];
-    // for(let place of PLACES){
-    //   this.items.push(place.name);
-    // }
-    this.items = PLACES;
+    this.places = PLACES;
+  }
+
+  openNavDetailsPage(place) {
+    this.nav.push(DetailPage, { place: place });
   }
 
   getItems(ev) {
@@ -32,8 +33,8 @@ export class AboutPage {
 
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
-      this.items = this.items.filter((item) => {
-        return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      this.places = this.places.filter((place) => {
+        return (place.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
   }
